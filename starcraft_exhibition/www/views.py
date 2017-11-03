@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import Unit
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'index.html')
+    units = Unit.objects.all()
+    return render(request, 'index.html', {'units': units})

@@ -9,7 +9,20 @@
 </head>
 
 <body>
-    Hello World!!
+    <h1>Starcraft Units</h1>
+    <br/> {% for unit in units %}
+
+    <img src="{{unit.image_url}}" alt="{{unit.name}}">
+    <p>Unit Name: {{unit.name}}</p>
+    <p>Mineral Cost: {{unit.mineral_cost}}</p>
+    <p>Gas Cost: {{unit.gas_cost}}</p>
+    <p>Damage: {{unit.damage}}</p>
+    <p>Range: {{unit.attack_range}}</p>
+    <p>Cooldown: {{unit.cooldown}}</p>
+    <p>Speed: {{unit.speed}}</p>
+
+
+    <hr/> {% endfor %}
 </body>
 
 </html>
